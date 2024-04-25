@@ -1,0 +1,1 @@
+/usr/bin/c++ -g CMakeFiles/FPSServer.dir/main.cpp.o -o FPSServer 
