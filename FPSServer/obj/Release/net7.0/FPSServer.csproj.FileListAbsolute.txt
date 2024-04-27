@@ -1,0 +1,14 @@
+E:\githubfile\FPSServer\FPSServer\FPSServer\bin\Release\net7.0\FPSServer.exe
+E:\githubfile\FPSServer\FPSServer\FPSServer\bin\Release\net7.0\FPSServer.deps.json
+E:\githubfile\FPSServer\FPSServer\FPSServer\bin\Release\net7.0\FPSServer.runtimeconfig.json
+E:\githubfile\FPSServer\FPSServer\FPSServer\bin\Release\net7.0\FPSServer.dll
+E:\githubfile\FPSServer\FPSServer\FPSServer\bin\Release\net7.0\FPSServer.pdb
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Release\net7.0\FPSServer.GeneratedMSBuildEditorConfig.editorconfig
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Release\net7.0\FPSServer.AssemblyInfoInputs.cache
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Release\net7.0\FPSServer.AssemblyInfo.cs
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Release\net7.0\FPSServer.csproj.CoreCompileInputs.cache
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Release\net7.0\FPSServer.dll
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Release\net7.0\refint\FPSServer.dll
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Release\net7.0\FPSServer.pdb
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Release\net7.0\FPSServer.genruntimeconfig.cache
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Release\net7.0\ref\FPSServer.dll
