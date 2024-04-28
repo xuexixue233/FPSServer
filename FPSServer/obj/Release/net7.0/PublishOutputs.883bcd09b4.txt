@@ -1,0 +1,5 @@
+C:\Users\wlz20\AppData\Local\Temp\rider-publish10447154250454901886\FPSServer.exe
+C:\Users\wlz20\AppData\Local\Temp\rider-publish10447154250454901886\FPSServer.dll
+C:\Users\wlz20\AppData\Local\Temp\rider-publish10447154250454901886\FPSServer.deps.json
+C:\Users\wlz20\AppData\Local\Temp\rider-publish10447154250454901886\FPSServer.runtimeconfig.json
+C:\Users\wlz20\AppData\Local\Temp\rider-publish10447154250454901886\FPSServer.pdb
