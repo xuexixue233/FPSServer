@@ -1,32 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "E:\\githubfile\\FPSServer\\FPSServer\\FPSServer\\FPSServer.csproj": {}
+    "F:\\WorkFile\\FPSServer\\FPSServer\\FPSServer.csproj": {}
   },
   "projects": {
-    "E:\\githubfile\\FPSServer\\FPSServer\\FPSServer\\FPSServer.csproj": {
+    "F:\\WorkFile\\FPSServer\\FPSServer\\FPSServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\githubfile\\FPSServer\\FPSServer\\FPSServer\\FPSServer.csproj",
+        "projectUniqueName": "F:\\WorkFile\\FPSServer\\FPSServer\\FPSServer.csproj",
         "projectName": "FPSServer",
-        "projectPath": "E:\\githubfile\\FPSServer\\FPSServer\\FPSServer\\FPSServer.csproj",
-        "packagesPath": "C:\\Users\\wlz20\\.nuget\\packages\\",
-        "outputPath": "E:\\githubfile\\FPSServer\\FPSServer\\FPSServer\\obj\\",
+        "projectPath": "F:\\WorkFile\\FPSServer\\FPSServer\\FPSServer.csproj",
+        "packagesPath": "C:\\Users\\办公主机\\.nuget\\packages\\",
+        "outputPath": "F:\\WorkFile\\FPSServer\\FPSServer\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\wlz20\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\办公主机\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,11 +32,22 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "protobuf-net": {
+              "target": "Package",
+              "version": "[3.2.30, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -60,7 +64,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.408\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204\\RuntimeIdentifierGraph.json"
         }
       }
     }

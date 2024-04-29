@@ -1,0 +1,7 @@
+C:\Users\办公主机\AppData\Local\Temp\rider-publish5264798204409760651\FPSServer.exe
+C:\Users\办公主机\AppData\Local\Temp\rider-publish5264798204409760651\FPSServer.dll
+C:\Users\办公主机\AppData\Local\Temp\rider-publish5264798204409760651\FPSServer.deps.json
+C:\Users\办公主机\AppData\Local\Temp\rider-publish5264798204409760651\FPSServer.runtimeconfig.json
+C:\Users\办公主机\AppData\Local\Temp\rider-publish5264798204409760651\FPSServer.pdb
+C:\Users\办公主机\AppData\Local\Temp\rider-publish5264798204409760651\protobuf-net.dll
+C:\Users\办公主机\AppData\Local\Temp\rider-publish5264798204409760651\protobuf-net.Core.dll

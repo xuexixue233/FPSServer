@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" remoteFilesAllowedToDisappearOnAutoupload="false">
+  <component name="PublishConfigData" serverName="阿里云" remoteFilesAllowedToDisappearOnAutoupload="false">
     <serverData>
       <paths name="阿里云">
         <serverdata>
           <mappings>
             <mapping local="$PROJECT_DIR$/FPSServer.sln" web="/" />
             <mapping local="$PROJECT_DIR$/FPSServer/FPSServer.csproj" web="/" />
+            <mapping local="$PROJECT_DIR$/FPSServer/obj/Debug/net7.0/FPSServer.GlobalUsings.g.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/FPSServer/obj/Debug/net7.0/FPSServer.AssemblyInfo.cs" web="/" />
+            <mapping local="$PROJECT_DIR$/FPSServer/obj/Debug/net7.0/FPSServer.GeneratedMSBuildEditorConfig.editorconfig" web="/" />
+            <mapping local="C:/Program Files/dotnet/sdk/8.0.204/Sdks/Microsoft.NET.Sdk/analyzers/build/config/analysislevel_7_default.globalconfig" web="/" />
+            <mapping local="$PROJECT_DIR$/FPSServer/Program.cs" web="/" />
             <mapping local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>

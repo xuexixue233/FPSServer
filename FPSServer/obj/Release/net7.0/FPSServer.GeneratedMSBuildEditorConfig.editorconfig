@@ -8,4 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = FPSServer
-build_property.ProjectDir = E:\githubfile\FPSServer\FPSServer\FPSServer\
+build_property.ProjectDir = F:\WorkFile\FPSServer\FPSServer\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
