@@ -11,7 +11,7 @@ using System;
 using System.Reflection;
 
 
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+872d47a3034272b987e0441af31bba762613d8bf")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 
 
 // 由 MSBuild WriteCodeFragment 类生成。

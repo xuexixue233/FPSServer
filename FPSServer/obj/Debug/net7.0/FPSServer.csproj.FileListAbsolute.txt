@@ -12,3 +12,7 @@ E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Debug\net7.0\refint\FPSServer.dl
 E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Debug\net7.0\FPSServer.pdb
 E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Debug\net7.0\FPSServer.genruntimeconfig.cache
 E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Debug\net7.0\ref\FPSServer.dll
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Debug\net7.0\FPSServer.csproj.AssemblyReference.cache
+E:\githubfile\FPSServer\FPSServer\FPSServer\bin\Debug\net7.0\protobuf-net.dll
+E:\githubfile\FPSServer\FPSServer\FPSServer\bin\Debug\net7.0\protobuf-net.Core.dll
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Debug\net7.0\FPSServer.csproj.CopyComplete

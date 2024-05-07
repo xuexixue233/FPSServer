@@ -31,3 +31,7 @@ F:\WorkFile\FPSServer\FPSServer\bin\Release\net7.0\protobuf-net.Core.dll
 F:\WorkFile\FPSServer\FPSServer\obj\Release\net7.0\FPSServer.csproj.Up2Date
 F:\WorkFile\FPSServer\FPSServer\obj\Release\net7.0\FPSServer.genruntimeconfig.cache
 F:\WorkFile\FPSServer\FPSServer\obj\Release\net7.0\ref\FPSServer.dll
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Release\net7.0\FPSServer.csproj.AssemblyReference.cache
+E:\githubfile\FPSServer\FPSServer\FPSServer\bin\Release\net7.0\protobuf-net.dll
+E:\githubfile\FPSServer\FPSServer\FPSServer\bin\Release\net7.0\protobuf-net.Core.dll
+E:\githubfile\FPSServer\FPSServer\FPSServer\obj\Release\net7.0\FPSServer.csproj.CopyComplete
