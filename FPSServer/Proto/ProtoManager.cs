@@ -1,15 +1,23 @@
-﻿namespace FPSServer.Proto;
+﻿using System.Text;
+using ProtoBuf;
+
+namespace FPSServer.Proto;
 
 public class ProtoManager
 {
     //编码
     public static byte[] Encode(PacketBase msgBase){
-        
+        MemoryStream stream= new MemoryStream();
+        Serializer.Deserialize(stream,msgBase);
+        return stream.ToArray();
     }
 
     //解码
-    public static PacketBase Decode(string protoName, byte[] bytes, int offset, int count){
-        
+    public static PacketBase Decode(string protoName, byte[] bytes, int offset, int count)
+    {
+        MemoryStream stream= new MemoryStream(bytes);
+        stream.Seek(offset,SeekOrigin.Begin);
+        return Serializer.Deserialize<PacketBase>(stream);
     }
     
     //编码协议名（2字节长度+字符串）

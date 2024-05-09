@@ -14,6 +14,8 @@ public class SCHeartBeat : SCPacketBase
         }
     }
 
+    public override string protoName { get; set; }
+
     public override void Clear()
     {
     }

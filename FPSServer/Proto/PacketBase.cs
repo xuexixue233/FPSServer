@@ -8,6 +8,8 @@ public abstract class PacketBase : IExtensible
 
     public abstract int Id { get; }
     
+    public abstract string protoName { get; set; }
+    
     public PacketBase()
     {
         m_ExtensionObject = null;
