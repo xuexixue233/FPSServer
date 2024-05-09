@@ -14,7 +14,11 @@ public class SCHeartBeat : SCPacketBase
         }
     }
 
-    public override string protoName { get; set; }
+    public override string protoName
+    {
+        get => "SCHeartBeat";
+        set => throw new NotImplementedException();
+    }
 
     public override void Clear()
     {
