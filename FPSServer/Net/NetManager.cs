@@ -168,8 +168,7 @@ class NetManager
         }
         
         //解析协议名
-        int nameCount = 0;
-        SCPacketHeader protoName = ProtoManager.DecodeName(readBuff.bytes, readBuff.readIdx);
+        CSPacketHeader protoName = ProtoManager.DecodeName(readBuff.bytes, readBuff.readIdx);
         if (protoName.Id==0)
         {
             Console.WriteLine("OnReceiveData MsgBase.DecodeName fail");
@@ -177,9 +176,9 @@ class NetManager
             return;
         }
 
-        readBuff.readIdx += nameCount;
+        readBuff.readIdx += 8;
         //解析协议体
-        int bodyCount = bodyLength - nameCount;
+        int bodyCount = bodyLength - 8;
         if (bodyCount <= 0)
         {
             Console.WriteLine("OnReceiveData fail, bodyCount <=0 ");
