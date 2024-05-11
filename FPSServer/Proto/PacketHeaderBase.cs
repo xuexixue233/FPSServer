@@ -1,6 +1,8 @@
-﻿namespace FPSServer.Proto;
+﻿using GameFramework;
 
-public abstract class PacketHeaderBase : IPacketHeader
+namespace FPSServer.Proto;
+
+public abstract class PacketHeaderBase : IPacketHeader, IReference
     {
         public abstract PacketType PacketType
         {

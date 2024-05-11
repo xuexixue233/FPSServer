@@ -1,4 +1,6 @@
-﻿using System.Text;
+﻿using System.Reflection;
+using System.Text;
+using GameFramework;
 using ProtoBuf;
 using ProtoBuf.Meta;
 
@@ -6,8 +8,35 @@ namespace FPSServer.Proto;
 
 public class ProtoManager
 {
-    private Dictionary<int, Type?> m_ClientToServerPacketTypes=new Dictionary<int, Type?>();
+    private static Dictionary<int, Type?> m_ClientToServerPacketTypes=new Dictionary<int, Type?>();
 
+    public static void Init()
+    {
+        Type packetBaseType = typeof(CSPacketBase);
+        Assembly assembly = Assembly.GetExecutingAssembly();
+        Type[] types = assembly.GetTypes();
+        for (int i = 0; i < types.Length; i++)
+        {
+            if (!types[i].IsClass || types[i].IsAbstract)
+            {
+                continue;
+            }
+
+            if (types[i].BaseType == packetBaseType)
+            {
+                PacketBase packetBase = (PacketBase)Activator.CreateInstance(types[i]);
+                Type packetType = GetClientToServerPacketType(packetBase.Id);
+                if (packetType != null)
+                {
+                    Console.WriteLine("Already exist packet type '{0}', check '{1}' or '{2}'?.", packetBase.Id.ToString(), packetType.Name, packetBase.GetType().Name);
+                    continue;
+                }
+
+                m_ClientToServerPacketTypes.Add(packetBase.Id, types[i]);
+            }
+        }
+    }
+    
     //编码
     public static byte[] Encode(PacketBase msgBase){
         MemoryStream stream= new MemoryStream();
@@ -20,13 +49,20 @@ public class ProtoManager
     {
         if (packetHeader is not CSPacketHeader csPacketHeader)
         {
-            Console.WriteLine("");
+            Console.WriteLine("PacketHeader is null");
             return null;
         }
 
-        MemoryStream stream= new MemoryStream(bytes);
-        stream.Seek(offset,SeekOrigin.Begin);
-        return Serializer.Deserialize<PacketBase>(stream);
+        Type? packetType = GetClientToServerPacketType(csPacketHeader.Id);
+
+        if (packetType!=null)
+        {
+            MemoryStream stream= new MemoryStream(bytes);
+            stream.Seek(offset,SeekOrigin.Begin);
+            return (CSPacketBase)RuntimeTypeModel.Default.DeserializeWithLengthPrefix(stream, ReferencePool.Acquire(packetType), packetType, PrefixStyle.Fixed32, 0);
+        }
+
+        return null;
     }
     
     //编码协议名
@@ -42,11 +78,12 @@ public class ProtoManager
         {
             return new CSPacketHeader();
         }
-        MemoryStream stream= new MemoryStream(bytes,offset,8);
-        return RuntimeTypeModel.Default.Deserialize<CSPacketHeader>(stream);
+        
+        MemoryStream stream= new MemoryStream(SubByte(bytes,offset,8));
+        return Serializer.DeserializeWithLengthPrefix<CSPacketHeader>(stream, PrefixStyle.Fixed32);
     }
 
-    private Type? GetClientToServerPacketType(int id)
+    private static Type? GetClientToServerPacketType(int id)
     {
         Type? type = null;
         if (m_ClientToServerPacketTypes.TryGetValue(id,out type))
@@ -55,5 +92,24 @@ public class ProtoManager
         }
 
         return null;
+    }
+    
+    private static byte[] SubByte(byte[] srcBytes, int startIndex, int length)
+    {
+        MemoryStream bufferStream = new MemoryStream();
+        byte[] returnByte = new byte[] { };
+        if (srcBytes == null) { return returnByte; }
+        if (startIndex < 0) { startIndex = 0; }
+        if (startIndex < srcBytes.Length)
+        {
+            if (length < 1 || length > srcBytes.Length - startIndex) { length = srcBytes.Length - startIndex; }
+            bufferStream.Write(srcBytes, startIndex, length);
+            returnByte = bufferStream.ToArray();
+            bufferStream.SetLength(0);
+            bufferStream.Position = 0;
+        }
+        bufferStream.Close();
+        bufferStream.Dispose();
+        return returnByte;
     }
 }

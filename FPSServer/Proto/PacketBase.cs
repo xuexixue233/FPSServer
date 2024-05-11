@@ -2,14 +2,10 @@
 
 namespace FPSServer.Proto;
 
-public abstract class PacketBase : IExtensible
+public abstract class PacketBase : Packet, IExtensible
 {
     private IExtension m_ExtensionObject;
 
-    public abstract int Id { get; }
-    
-    public abstract string protoName { get; set; }
-    
     public PacketBase()
     {
         m_ExtensionObject = null;
@@ -24,6 +20,4 @@ public abstract class PacketBase : IExtensible
     {
         return Extensible.GetExtensionObject(ref m_ExtensionObject, createIfMissing);
     }
-
-    public abstract void Clear();
 }

@@ -32,6 +32,9 @@ class NetManager
         listenfd.Bind(ipEp);
         //Listen
         listenfd.Listen(0);
+        
+        ProtoManager.Init();
+        
         Console.WriteLine("[服务器]启动成功");
         //循环
         while (true)
@@ -159,14 +162,8 @@ class NetManager
         }
 
         //消息体长度
-        int readIdx = readBuff.readIdx;
-        byte[] bytes = readBuff.bytes;
-        Int16 bodyLength = (Int16)((bytes[readIdx + 1] << 8) | bytes[readIdx]);
-        if (readBuff.length < bodyLength)
-        {
-            return;
-        }
-        
+        int bodyLength = readBuff.length;
+
         //解析协议名
         CSPacketHeader protoName = ProtoManager.DecodeName(readBuff.bytes, readBuff.readIdx);
         if (protoName.Id==0)
@@ -186,13 +183,18 @@ class NetManager
             return;
         }
 
-        PacketBase msgBase = ProtoManager.Decode(protoName, readBuff.bytes, readBuff.readIdx);
+        PacketBase? msgBase = ProtoManager.Decode(protoName, readBuff.bytes, readBuff.readIdx);
+        if (msgBase==null)
+        {
+            Console.WriteLine("OnReceiveData fail, msgBase is null ");
+            return;
+        }
         readBuff.readIdx += bodyCount;
         readBuff.CheckAndMoveBytes();
-        //TODO:分发消息
+
         // MethodInfo mi = typeof(MsgHandler).GetMethod(protoName);
-        // object[] o = { state, msgBase };
-        // Console.WriteLine("Receive " + protoName);
+        object[] o = { state, msgBase };
+        Console.WriteLine("Receive packet Id:{0}" ,protoName.Id);  
         // if (mi != null)
         // {
         //     mi.Invoke(null, o);
