@@ -1,60 +1,53 @@
 ﻿using System.Text;
 using ProtoBuf;
+using ProtoBuf.Meta;
 
 namespace FPSServer.Proto;
 
 public class ProtoManager
 {
+    private Dictionary<int, Type?> m_ClientToServerPacketTypes=new Dictionary<int, Type?>();
+
     //编码
     public static byte[] Encode(PacketBase msgBase){
         MemoryStream stream= new MemoryStream();
-        Serializer.Deserialize(stream,msgBase);
+        Serializer.SerializeWithLengthPrefix(stream,msgBase,PrefixStyle.Fixed32);
         return stream.ToArray();
     }
 
     //解码
-    public static PacketBase Decode(string protoName, byte[] bytes, int offset, int count)
+    public static PacketBase Decode(IPacketHeader packetHeader, byte[] bytes, int offset)
     {
         MemoryStream stream= new MemoryStream(bytes);
         stream.Seek(offset,SeekOrigin.Begin);
         return Serializer.Deserialize<PacketBase>(stream);
     }
     
-    //编码协议名（2字节长度+字符串）
-    public static byte[] EncodeName(PacketBase msgBase){
-        //名字bytes和长度
-        byte[] nameBytes = System.Text.Encoding.UTF8.GetBytes(msgBase.protoName);
-        Int16 len = (Int16)nameBytes.Length;
-        //申请bytes数值
-        byte[] bytes = new byte[2+len];
-        //组装2字节的长度信息
-        bytes[0] = (byte)(len%256);
-        bytes[1] = (byte)(len/256);
-        //组装名字bytes
-        Array.Copy(nameBytes, 0, bytes, 2, len);
-
-        return bytes;
+    //编码协议名
+    public static byte[] EncodeName(SCPacketHeader msgBase){
+        MemoryStream stream= new MemoryStream();
+        Serializer.SerializeWithLengthPrefix(stream,msgBase,PrefixStyle.Fixed32);
+        return stream.ToArray();
     }
 
-    //解码协议名（2字节长度+字符串）
-    public static string DecodeName(byte[] bytes, int offset, out int count){
-        count = 0;
-        //必须大于2字节
-        if(offset + 2 > bytes.Length){
-            return "";
+    //解码协议名(暂时为前八字节)
+    public static SCPacketHeader DecodeName(byte[] bytes, int offset){
+        if (bytes.Length<8)
+        {
+            return new SCPacketHeader();
         }
-        //读取长度
-        Int16 len = (Int16)((bytes[offset+1] << 8 )| bytes[offset] );
-        if(len <= 0){
-            return "";
+        MemoryStream stream= new MemoryStream(bytes,offset,8);
+        return RuntimeTypeModel.Default.Deserialize<SCPacketHeader>(stream);
+    }
+
+    private Type? GetClientToServerPacketType(int id)
+    {
+        Type? type = null;
+        if (m_ClientToServerPacketTypes.TryGetValue(id,out type))
+        {
+            return type;
         }
-        //长度必须足够
-        if(offset + 2 + len > bytes.Length){
-            return "";
-        }
-        //解析
-        count = 2+len;
-        string name = System.Text.Encoding.UTF8.GetString(bytes, offset+2, len);
-        return name;
+
+        return null;
     }
 }

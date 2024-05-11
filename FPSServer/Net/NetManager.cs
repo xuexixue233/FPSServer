@@ -153,7 +153,7 @@ class NetManager
     {
         ByteArray readBuff = state.readBuff;
         //消息长度
-        if (readBuff.length <= 2)
+        if (readBuff.length <= 4)
         {
             return;
         }
@@ -166,12 +166,11 @@ class NetManager
         {
             return;
         }
-
-        readBuff.readIdx += 2;
+        
         //解析协议名
         int nameCount = 0;
-        string protoName = ProtoManager.DecodeName(readBuff.bytes, readBuff.readIdx, out nameCount);
-        if (protoName == "")
+        SCPacketHeader protoName = ProtoManager.DecodeName(readBuff.bytes, readBuff.readIdx);
+        if (protoName.Id==0)
         {
             Console.WriteLine("OnReceiveData MsgBase.DecodeName fail");
             Close(state);
@@ -188,21 +187,21 @@ class NetManager
             return;
         }
 
-        PacketBase msgBase = ProtoManager.Decode(protoName, readBuff.bytes, readBuff.readIdx, bodyCount);
+        PacketBase msgBase = ProtoManager.Decode(protoName, readBuff.bytes, readBuff.readIdx);
         readBuff.readIdx += bodyCount;
         readBuff.CheckAndMoveBytes();
-        //分发消息
-        MethodInfo mi = typeof(MsgHandler).GetMethod(protoName);
-        object[] o = { state, msgBase };
-        Console.WriteLine("Receive " + protoName);
-        if (mi != null)
-        {
-            mi.Invoke(null, o);
-        }
-        else
-        {
-            Console.WriteLine("OnReceiveData Invoke fail " + protoName);
-        }
+        //TODO:分发消息
+        // MethodInfo mi = typeof(MsgHandler).GetMethod(protoName);
+        // object[] o = { state, msgBase };
+        // Console.WriteLine("Receive " + protoName);
+        // if (mi != null)
+        // {
+        //     mi.Invoke(null, o);
+        // }
+        // else
+        // {
+        //     Console.WriteLine("OnReceiveData Invoke fail " + protoName);
+        // }
 
         //继续读取消息
         if (readBuff.length > 2)
@@ -224,10 +223,15 @@ class NetManager
         {
             return;
         }
-
+        
         //数据编码
-        byte[] nameBytes = ProtoManager.EncodeName(msg);
         byte[] bodyBytes = ProtoManager.Encode(msg);
+        
+        SCPacketHeader scPacketHeader = new SCPacketHeader();
+        scPacketHeader.Id = msg.Id;
+        scPacketHeader.PacketLength = bodyBytes.Length - 8;
+        byte[] nameBytes = ProtoManager.EncodeName(scPacketHeader);
+        
         int len = nameBytes.Length + bodyBytes.Length;
         byte[] sendBytes = new byte[2 + len];
         //组装长度
