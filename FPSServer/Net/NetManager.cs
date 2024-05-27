@@ -165,8 +165,8 @@ class NetManager
         int bodyLength = readBuff.length;
 
         //解析协议名
-        CSPacketHeader protoName = ProtoManager.DecodeName(readBuff.bytes, readBuff.readIdx);
-        if (protoName.Id==0)
+        CSPacketHeader proto = ProtoManager.DecodeName(readBuff.bytes, readBuff.readIdx);
+        if (proto.Id==0)
         {
             Console.WriteLine("OnReceiveData MsgBase.DecodeName fail");
             Close(state);
@@ -183,7 +183,7 @@ class NetManager
             return;
         }
 
-        PacketBase? msgBase = ProtoManager.Decode(protoName, readBuff.bytes, readBuff.readIdx);
+        PacketBase? msgBase = ProtoManager.Decode(proto, readBuff.bytes, readBuff.readIdx);
         if (msgBase==null)
         {
             Console.WriteLine("OnReceiveData fail, msgBase is null ");
@@ -192,17 +192,19 @@ class NetManager
         readBuff.readIdx += bodyCount;
         readBuff.CheckAndMoveBytes();
 
-        // MethodInfo mi = typeof(MsgHandler).GetMethod(protoName);
+        var protoName = proto.GetType().ToString();
+
+        MethodInfo? mi = typeof(MsgHandler).GetMethod(protoName[2..]);
         object[] o = { state, msgBase };
-        Console.WriteLine("Receive packet Id:{0}" ,protoName.Id);  
-        // if (mi != null)
-        // {
-        //     mi.Invoke(null, o);
-        // }
-        // else
-        // {
-        //     Console.WriteLine("OnReceiveData Invoke fail " + protoName);
-        // }
+        Console.WriteLine("Receive packet Id:{0}" ,proto.Id);  
+        if (mi != null)
+        {
+            mi.Invoke(null, o);
+        }
+        else
+        {
+            Console.WriteLine("OnReceiveData Invoke fail " + protoName);
+        }
 
         //继续读取消息
         if (readBuff.length > 2)

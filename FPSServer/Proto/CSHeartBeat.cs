@@ -17,6 +17,6 @@ public class CSHeartBeat : CSPacketBase
 
     public override void Clear()
     {
-            
+        
     }
 }
