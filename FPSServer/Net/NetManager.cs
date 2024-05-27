@@ -192,7 +192,8 @@ class NetManager
         readBuff.readIdx += bodyCount;
         readBuff.CheckAndMoveBytes();
 
-        var protoName = proto.GetType().ToString();
+        var typeStr = msgBase.GetType().ToString().Split('.');
+        var protoName = typeStr[^1];
 
         MethodInfo? mi = typeof(MsgHandler).GetMethod(protoName[2..]);
         object[] o = { state, msgBase };

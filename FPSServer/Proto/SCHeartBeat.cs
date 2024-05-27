@@ -1,21 +1,22 @@
-﻿namespace FPSServer.Proto;
+﻿using ProtoBuf;
 
+namespace FPSServer.Proto;
+
+[Serializable, ProtoContract(Name = @"SCHeartBeat")]
 public class SCHeartBeat : SCPacketBase
 {
-    public SCHeartBeat()
-    {
-    }
+    public override int Id => 2;
 
-    public override int Id
-    {
-        get
-        {
-            return 2;
-        }
-    }
+    [ProtoMember(1)]
+    public string time{ get; set; }
 
     public override void Clear()
     {
-        throw new NotImplementedException();
+        
+    }
+    
+    public SCHeartBeat()
+    {
+        time = "1";
     }
 }

@@ -38,10 +38,13 @@ public class ProtoManager
     }
     
     //编码
-    public static byte[] Encode(PacketBase msgBase){
-        MemoryStream stream= new MemoryStream();
-        Serializer.SerializeWithLengthPrefix(stream,msgBase,PrefixStyle.Fixed32);
-        return stream.ToArray();
+    public static byte[] Encode(PacketBase msgBase)
+    {
+        MemoryStream memoryStream = new MemoryStream();
+        memoryStream.Position = 8;
+        RuntimeTypeModel.Default.SerializeWithLengthPrefix(memoryStream, msgBase, msgBase.GetType(), PrefixStyle.Fixed32, 0);
+        return memoryStream.ToArray();
+        
     }
 
     //解码
