@@ -1,0 +1,7 @@
+C:\Users\wlz20\AppData\Local\Temp\rider-publish15932327524954753062\FPSServer.exe
+C:\Users\wlz20\AppData\Local\Temp\rider-publish15932327524954753062\FPSServer.dll
+C:\Users\wlz20\AppData\Local\Temp\rider-publish15932327524954753062\FPSServer.deps.json
+C:\Users\wlz20\AppData\Local\Temp\rider-publish15932327524954753062\FPSServer.runtimeconfig.json
+C:\Users\wlz20\AppData\Local\Temp\rider-publish15932327524954753062\FPSServer.pdb
+C:\Users\wlz20\AppData\Local\Temp\rider-publish15932327524954753062\protobuf-net.dll
+C:\Users\wlz20\AppData\Local\Temp\rider-publish15932327524954753062\protobuf-net.Core.dll

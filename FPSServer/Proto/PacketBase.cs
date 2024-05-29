@@ -2,6 +2,7 @@
 
 namespace FPSServer.Proto;
 
+[ProtoContract]
 public abstract class PacketBase : Packet, IExtensible
 {
     private IExtension m_ExtensionObject;

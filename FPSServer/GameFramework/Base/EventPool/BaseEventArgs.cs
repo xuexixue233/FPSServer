@@ -5,11 +5,14 @@
 // Feedback: mailto:ellan@gameframework.cn
 //------------------------------------------------------------
 
+using ProtoBuf;
+
 namespace GameFramework
 {
     /// <summary>
     /// 事件基类。
     /// </summary>
+    [ProtoContract]
     public abstract class BaseEventArgs : GameFrameworkEventArgs
     {
         /// <summary>

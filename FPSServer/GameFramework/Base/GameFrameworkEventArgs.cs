@@ -6,12 +6,14 @@
 //------------------------------------------------------------
 
 using System;
+using ProtoBuf;
 
 namespace GameFramework
 {
     /// <summary>
     /// 游戏框架中包含事件数据的类的基类。
     /// </summary>
+    [ProtoContract]
     public abstract class GameFrameworkEventArgs : EventArgs, IReference
     {
         /// <summary>

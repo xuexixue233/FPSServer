@@ -27,7 +27,7 @@ class NetManager
         listenfd = new Socket(AddressFamily.InterNetwork,
             SocketType.Stream, ProtocolType.Tcp);
         //Bind
-        IPAddress ipAdr = IPAddress.Parse("127.0.0.1");
+        IPAddress ipAdr = IPAddress.Parse("172.16.0.148");
         IPEndPoint ipEp = new IPEndPoint(ipAdr, listenPort);
         listenfd.Bind(ipEp);
         //Listen
@@ -183,7 +183,7 @@ class NetManager
             return;
         }
 
-        PacketBase? msgBase = ProtoManager.Decode(proto, readBuff.bytes, readBuff.readIdx);
+        Packet? msgBase = ProtoManager.Decode(proto, readBuff.bytes, readBuff.readIdx);
         if (msgBase==null)
         {
             Console.WriteLine("OnReceiveData fail, msgBase is null ");
@@ -237,15 +237,16 @@ class NetManager
         byte[] nameBytes = ProtoManager.EncodeName(scPacketHeader);
         
         int len = nameBytes.Length + bodyBytes.Length;
-        byte[] sendBytes = new byte[2 + len];
+        byte[] sendBytes = new byte[len];
         //组装长度
         sendBytes[0] = (byte)(len % 256);
         sendBytes[1] = (byte)(len / 256);
         //组装名字
-        Array.Copy(nameBytes, 0, sendBytes, 2, nameBytes.Length);
+        Array.Copy(nameBytes, 0, sendBytes, 0, nameBytes.Length);
         //组装消息体
-        Array.Copy(bodyBytes, 0, sendBytes, 2 + nameBytes.Length, bodyBytes.Length);
+        Array.Copy(bodyBytes, 8, sendBytes, nameBytes.Length, bodyBytes.Length-8);
         //为简化代码，不设置回调
+
         try
         {
             cs.socket.BeginSend(sendBytes, 0, sendBytes.Length, 0, null, null);

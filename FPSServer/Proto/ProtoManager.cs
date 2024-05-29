@@ -48,7 +48,7 @@ public class ProtoManager
     }
 
     //解码
-    public static PacketBase? Decode(IPacketHeader packetHeader, byte[] bytes, int offset)
+    public static Packet? Decode(IPacketHeader packetHeader, byte[] bytes, int offset)
     {
         if (packetHeader is not CSPacketHeader csPacketHeader)
         {
@@ -62,7 +62,7 @@ public class ProtoManager
         {
             MemoryStream stream= new MemoryStream(bytes);
             stream.Seek(offset,SeekOrigin.Begin);
-            return (CSPacketBase)RuntimeTypeModel.Default.DeserializeWithLengthPrefix(stream, ReferencePool.Acquire(packetType), packetType, PrefixStyle.Fixed32, 0);
+            return (Packet)RuntimeTypeModel.Default.DeserializeWithLengthPrefix(stream, ReferencePool.Acquire(packetType), packetType, PrefixStyle.Fixed32, 0);
         }
 
         return null;
