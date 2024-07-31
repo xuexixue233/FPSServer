@@ -1,7 +1,6 @@
-#include "Chapter/Chapter2/Chapter2.h"
+#include <iostream>
 
 int main() {
-    Chapter2 chapter2;
-    chapter2.Main();
+    std::cout << "Hello, World!" << std::endl;
     return 0;
 }
