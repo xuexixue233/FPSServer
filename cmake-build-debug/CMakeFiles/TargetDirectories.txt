@@ -1,3 +1,0 @@
-E:/MyProject/FPSServer/cmake-build-debug/CMakeFiles/FPSServer.dir
-E:/MyProject/FPSServer/cmake-build-debug/CMakeFiles/edit_cache.dir
-E:/MyProject/FPSServer/cmake-build-debug/CMakeFiles/rebuild_cache.dir
