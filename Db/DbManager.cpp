@@ -4,7 +4,7 @@
 #include "DbManager.h"
 
 DbManager::DbManager() {
-    sql= mysql_init(nullptr);
+
 }
 
 bool DbManager::Connect(string db, const char *ip, int port, const char *user, string pw) {

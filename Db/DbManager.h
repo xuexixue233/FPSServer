@@ -4,22 +4,19 @@
 
 #ifndef FPSSERVER_DBMANAGER_H
 #define FPSSERVER_DBMANAGER_H
-#include <string>
 #include <iostream>
-#include "mysql.h"
-#include <regex>
+#include <mysql/jdbc.h>
 
 using namespace std;
-
+using namespace sql;
 
 class DbManager {
 public:
-
     bool Connect(string db, const char *ip, int port, const char *user, string pw);
     DbManager();
     ~DbManager();
 private:
-    MYSQL *sql;
+    unique_ptr<Connection> mysql;
 };
 
 
