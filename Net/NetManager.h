@@ -6,7 +6,9 @@
 #define FPSSERVER_NETMANAGER_H
 
 
-class NetManager {
+#include "../Common/Singleton.h"
+
+class NetManager: public Singleton<NetManager>{
 public:
     static void StartLoop(int listenPort);
 private:

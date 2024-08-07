@@ -1,11 +1,5 @@
 #include "DbManager.h"
 
-DbManager *DbManager::getInstance() {
-    if(instance==nullptr)
-        instance=new DbManager();
-    return instance;
-}
-
 bool DbManager::Connect(string db, string ip, int port, string user, string pw){
     try {
         driver = get_mysql_driver_instance();
@@ -16,17 +10,6 @@ bool DbManager::Connect(string db, string ip, int port, string user, string pw){
     } catch (SQLException &e) {
         cerr << "[数据库] 连接失败: " << e.what() << "\n";
         return false;
-    }
-}
-
-DbManager::DbManager() {
-    driver = nullptr;
-    conn = nullptr;
-}
-
-DbManager::~DbManager() {
-    if (conn) {
-        conn->close();
     }
 }
 

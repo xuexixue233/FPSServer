@@ -5,7 +5,7 @@ using namespace std;
 
 int main() {
 
-    if (!DbManager::getInstance()->Connect("fpsserver", "127.0.0.1", 3306, "root", "b5fe5bf42418724e"))
+    if (!DbManager::GetInstance().Connect("fpsserver", "127.0.0.1", 3306, "root", "b5fe5bf42418724e"))
     {
         return 0;
     }

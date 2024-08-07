@@ -14,7 +14,9 @@ add_executable(FPSServer main.cpp
         Net/NetManager.cpp
         Net/NetManager.h
         Db/DbManager.cpp
-        Db/DbManager.h)
+        Db/DbManager.h
+        Common/Singleton.cpp
+        Common/Singleton.h)
 
 # 链接 MySQL Connector/C++ 库
 target_link_libraries(FPSServer

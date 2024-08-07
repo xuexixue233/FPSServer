@@ -22,8 +22,10 @@
   <component name="ChangeListManager">
     <list default="true" id="d718713b-8f3f-4b1b-b906-5130af2b5631" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Db/DbManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Db/DbManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Db/DbManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Db/DbManager.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Net/NetManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Net/NetManager.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +72,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\MyProject\FPSServer\Common" />
+    </key>
+  </component>
   <component name="RunManager">
     <configuration name="FPSServer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FPSServer" TARGET_NAME="FPSServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FPSServer" RUN_TARGET_NAME="FPSServer">
       <method v="2">
@@ -95,6 +102,8 @@
       <workItem from="1722937842574" duration="2672000" />
       <workItem from="1722941221106" duration="413000" />
       <workItem from="1722999023645" duration="4364000" />
+      <workItem from="1723014784766" duration="2360000" />
+      <workItem from="1723021187112" duration="1439000" />
     </task>
     <servers />
   </component>

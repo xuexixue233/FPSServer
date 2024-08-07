@@ -7,17 +7,15 @@
 #include <iostream>
 #include <mysql/jdbc.h>
 #include <iostream>
+#include "../Common/Singleton.h"
 #include <regex>
 
 using namespace std;
 using namespace sql;
 using namespace mysql;
 
-class DbManager {
+class DbManager: public Singleton<DbManager> {
 public:
-    static DbManager * getInstance();
-    DbManager();
-    ~DbManager();
 
     bool Connect(string db, string ip, int port, string user, string pw);
     bool IsAccountExist(string id);
@@ -27,7 +25,6 @@ public:
 private:
     void CheckAndReconnect();
     bool IsSafeString(string str);
-    static DbManager *instance ;
 
     shared_ptr<Connection> conn;
     MySQL_Driver* driver;
