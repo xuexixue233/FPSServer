@@ -22,150 +22,8 @@
   <component name="ChangeListManager">
     <list default="true" id="d718713b-8f3f-4b1b-b906-5130af2b5631" name="更改" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Db/DbManager.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Db/DbManager.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Db/DbManager.h" beforeDir="false" afterPath="$PROJECT_DIR$/Db/DbManager.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/errmsg.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/field_types.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/my_command.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/my_compress.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/my_list.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/mysql.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/mysql/client_plugin.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/mysql/plugin_auth_common.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/mysql/udf_registration_types.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/mysql_com.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/mysql_time.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/mysql_version.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/mysqld_error.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/mysqlx_ername.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/mysqlx_error.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/mysqlx_version.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/include/openssl/applink.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_euc-jp/char.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_euc-jp/dicrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_euc-jp/left-id.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_euc-jp/matrix.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_euc-jp/pos-id.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_euc-jp/rewrite.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_euc-jp/right-id.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_euc-jp/sys.dic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_euc-jp/unk.dic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_sjis/char.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_sjis/dicrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_sjis/left-id.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_sjis/matrix.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_sjis/pos-id.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_sjis/rewrite.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_sjis/right-id.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_sjis/sys.dic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_sjis/unk.dic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_utf-8/char.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_utf-8/dicrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_utf-8/left-id.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_utf-8/matrix.bin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_utf-8/pos-id.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_utf-8/rewrite.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_utf-8/right-id.def" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_utf-8/sys.dic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/dic/ipadic_utf-8/unk.dic" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/mecab/etc/mecabrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/burmesedict.dict" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/char.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/cjdict.dict" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/de.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/el.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/en.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/en_US.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/en_US_POSIX.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/es.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/fi.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/fr.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/it.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/ja.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/khmerdict.dict" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/ko.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/laodict.dict" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/line.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/line_cj.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/line_loose.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/line_loose_cj.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/line_loose_phrase_cj.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/line_normal.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/line_normal_cj.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/line_normal_phrase_cj.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/line_phrase_cj.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/pt.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/res_index.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/root.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/ru.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/sent.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/sent_el.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/sv.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/thaidict.dict" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/title.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/word.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/word_POSIX.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/word_fi_sv.brk" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/zh.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/brkitr/zh_Hant.res" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/cnvalias.icu" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/uemoji.icu" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/ulayout.icu" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysql/lib/private/icudt73l/unames.icu" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/build_config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/callback.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/config.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/connection.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/datatype.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/driver.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/exception.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/metadata.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/parameter_metadata.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/prepared_statement.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/resultset.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/resultset_metadata.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/sqlstring.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/statement.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/variant.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/version_info.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/cppconn/warning.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/mysql_connection.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/mysql_driver.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/jdbc/mysql_error.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysql/jdbc.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/common.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/common/api.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/common/error.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/common/op_if.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/common/settings.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/common/util.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/common/value.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/common_constants.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/collations.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/collection_crud.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/common.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/crud.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/detail/crud.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/detail/error.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/detail/result.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/detail/row.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/detail/session.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/detail/settings.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/document.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/error.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/executable.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/mysql_charsets.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/mysql_collations.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/result.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/row.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/settings.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/devapi/table_crud.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/version_info.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/xapi.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/include/mysqlx/xdevapi.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/lib64/debug/mysqlcppconn-10-vs14.pdb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ExtLib/mysqlcpp/lib64/debug/mysqlcppconnx-2-vs14.pdb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -213,12 +71,12 @@
   }
 }</component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="FPSServer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FPSServer" TARGET_NAME="FPSServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FPSServer" RUN_TARGET_NAME="FPSServer">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="FPSServer" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="FPSServer" TARGET_NAME="FPSServer" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="FPSServer" RUN_TARGET_NAME="FPSServer">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -236,6 +94,7 @@
       <workItem from="1722931528752" duration="4717000" />
       <workItem from="1722937842574" duration="2672000" />
       <workItem from="1722941221106" duration="413000" />
+      <workItem from="1722999023645" duration="4364000" />
     </task>
     <servers />
   </component>
